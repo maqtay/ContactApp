@@ -101,6 +101,11 @@ loadContacts(){
 }
 
 class DetailScreen extends Component {
+  constructor(props){
+    super(props);
+  }
+
+
   static navigationOptions = ({navigation, navigationOptions}) => {
     return{
       title: navigation.getParam("name", 'No Name'),
@@ -128,7 +133,7 @@ class DetailScreen extends Component {
         </Button>
         <Button mode="text">
            Numara: 
-           {
+           {   
               navigation.getParam('phoneNumber', "null")
            }
         </Button>
